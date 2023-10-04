@@ -1,0 +1,69 @@
+extends layout
+block content
+    .row.banner
+        .col-12
+            h1 Ikigai 
+            .rating
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.far.fa-star
+    .row
+        .col-12.col-lg-9
+            .row
+                .col-12.col-md-6
+                    .infoblock
+                        .infoAuthor
+                            h2.Authtitle About author
+                            p Hector Garcia is the bestselling author of IKIGAI the Japanese Secret to a Long and Happy Life (with Francesc Miralles), The Magic of Japan, Ichigo Ichie, A geek in Japan, and other books. I write about Japanese culture and how its wisdom can help us to lead better lives. I’m truly grateful to all the millions of people who have read my words. For us, writers, our art becomes meaningful when we are read. Thank you.
+                        .infoGenre
+                            h2.card-title Genre
+                            div.card-text-container
+                              p.card-text Self-help
+                .col-12.col-md-6
+                    .infoBookpic
+                        img.card-img-top.img-fluid.rounded(src='/images/ikigai_book1.jpg')
+                        br
+                        button#openpdf(type="button") Read me
+                        script.
+                            document.getElementById('openpdf').addEventListener('click', function() {
+                                // Replace 'your_pdf_url.pdf' with the actual URL of your PDF file.
+                                var pdfUrl = 'https://pdfhost.io/v/nguyNY9zS_Ikigai_Libtooncom_';
+                                console.log("clicked");
+                                // Open the PDF in a new window or tab.
+                                window.open(pdfUrl, '_blank');
+                            });
+            .row
+                .col-12
+                    .infoblock.review-card
+                            a.btn.btn-primary.float-end(href='/Book/review/new') Add review
+                            h2.card-title reviews
+                            .row.review
+                                .col-12
+                                    span.rating
+                                        i.fas.fa-star
+                                        i.fas.fa-star
+                                        i.fas.fa-star
+                                        i.fas.fa-star
+                                        i.fas.fa-star
+                                    span.reviewAuthor anonymous1
+                                    p.small.reviewTimestamp 16 February 2017
+                                .col-12
+                                    p nicee
+                            br
+                            .row.review
+                                .col-12
+                                    span.rating
+                                        i.fas.fa-star
+                                        i.fas.fa-star
+                                        i.fas.fa-star
+                                        i.far.fa-star
+                                        i.far.fa-star
+                                    span.reviewAuthor Charlie Chaplin
+                                    p.small.reviewTimestamp 14 February 2017
+                                .col-12
+                                    p It was okay.
+        .col-12.col-lg-3
+            p.lead Booktangle goes beyond being just a bookstore; it's a thriving literary community.
+            p.lead If you've been and you like it - or if you don't - please leave a review to help other people just like you.

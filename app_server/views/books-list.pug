@@ -1,0 +1,18 @@
+extends layout
+block content
+  .container
+    .row
+      h1.phead= pageHeader.title 
+      small #{pageHeader.strapline}
+      //- First Book
+      .row
+        each book in books
+          .card
+            a(href="/Book") 
+              img.card-img-top(src= book.image, alt="Book")
+              .card-body
+                h5.card-title= book.name
+                div.card-text-container
+                  .row
+                    each genre in book.genres
+                      p.card-text= genre

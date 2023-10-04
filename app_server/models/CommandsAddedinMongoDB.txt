@@ -1,0 +1,21 @@
+Install mongodb and create a connection
+create a databse named Loc8r and collections named locations in it
+Then follow the following commands
+
+'''
+show dbs
+use local
+show collections
+db.startup_log.find()
+use BookTangle
+
+db.getCollection('books').insertMany([{name: 'Ikigai: The Japanese Secret to a Long and Happy Life',rating: 4,genres: ['Self-help'],authors: ['Hector Garcia', 'Francesc Miralles'],image: '/images/ikigai_book1.jpg'},
+{name: 'The Book Of Five Rings',rating: 4,genres: ['philosophy', 'strategy'],authors: ['Miyamoto Musashi'],image: '/images/the-book-of-five-rings_book2.jpg'},
+{name: 'Deacon King Kong',rating: 4,genres: ['Fiction'],authors: ['James McBride'],image: '/images/dconkong_book3.jpeg'}]);
+
+use BookTangle
+show collections
+db.books.find()
+
+
+'''
