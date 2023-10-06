@@ -1,0 +1,17 @@
+extends layout
+block content
+  .container
+    .row
+      h1.phead= `Books in Genre: ${pageHeader.title}`
+      small #{pageHeader.strapline}
+      .row
+        each book in books
+          .card
+            a(href="/Book") 
+              img.card-img-top(src= book.image, alt="Book")
+              .card-body
+                h5.card-title= book.name
+                div.card-text-container
+                  .row
+                    each genre in book.genres
+                      p.card-text= genre

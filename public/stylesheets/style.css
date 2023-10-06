@@ -43,7 +43,7 @@ legend {
 
 .card {
   background-color: #f7fcfd;
-  padding: 1rem;
+  /* padding: 4px 4px; */
   margin: 10px;
   border-radius: 10px;
   max-height: 380px;
@@ -54,19 +54,13 @@ legend {
   /* Allow items to wrap to the next line */
   gap: 10px;
   /* Adjust spacing between elements as needed */
-  width: 250px;
+  width: 240px;
 }
 
 .card:hover {
   transform: scale(0.95);
   background-color: rgb(254, 237, 186);
   border: 2px solid rgb(253, 216, 115);
-}
-
-.card-primary {
-  border-color: #cef3f7;
-  margin-bottom: 0.5rem;
-  color: #fff;
 }
 
 .banner {
@@ -116,10 +110,6 @@ h1 small {
 
 .address {
   margin-bottom: 0.5rem;
-}
-
-.facilities span.badge {
-  margin-right: 2px;
 }
 
 p {
@@ -203,9 +193,10 @@ h5.card-title {
 }
 
 .card img.card-img-top {
+
   border-radius: 5px;
   display: block;
-  margin: auto;
+  margin: 5px auto;
 }
 
 #openpdf {
@@ -216,4 +207,28 @@ h5.card-title {
   padding: 3px 8px;
   border-radius: 6px;
   color: whitesmoke;
+}
+
+.form-group.searchbar {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+button.btn.btn-outline-success {
+  background-color: rgb(54, 114, 224);
+  color: #312929;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+input.form-control {
+  border-radius: 10px;
+}
+
+.form-group.row {
+  margin: 10px;
+}
+
+.option-text {
+  color: #161313;
 }
