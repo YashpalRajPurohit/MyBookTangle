@@ -36,9 +36,8 @@ app.get('/search', (req, res) => {
 app.get('/genre/:genre', (req, res) => {
   const selectedGenre = req.params.genre;
   const filteredBooks = books.filter(book => book.genres.includes(selectedGenre));
-  res.render('books-list', { books: filteredBooks, pageHeader: { title: 'Genre Results', strapline: `Books in Genre: ${selectedGenre}` } });
+  res.render('books-list', { books: filteredBooks, pageHeader: { title: `${selectedGenre}`, strapline: `Books in Genre:` } });
 });
-
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

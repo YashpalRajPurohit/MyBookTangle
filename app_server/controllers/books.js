@@ -11,6 +11,7 @@ const genres = [
     'Horror',
     'Fantasy',
     'Sci-fi',
+    'Strategy',
 ];
 
 const books = [
@@ -24,7 +25,7 @@ const books = [
     {
         name: 'The Book Of Five Rings',
         rating: 4,
-        genres: ['Philosophy', 'strategy'],
+        genres: ['Philosophy', 'Strategy'],
         authors: ['Miyamoto Musashi'],
         image: '/images/the-book-of-five-rings_book2.jpg'
     },

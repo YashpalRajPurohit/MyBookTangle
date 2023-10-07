@@ -22,7 +22,7 @@ html
                 option(selected) Genre
                 //- Note the 'selected' attribute in the option element
                 .dropdown-menu(aria-labelledby='genreDropdown')
-                  each genre in ['Self-help','Philosophy','Fiction','Friendship','Romance','Mystery','Magic','Crime','Thriller','Horror','Fantasy','Sci-fi']
+                  each genre in ['Self-help','Philosophy','Fiction','Friendship','Romance','Mystery','Magic','Crime','Thriller','Horror','Fantasy','Sci-fi','Strategy']
                     option.option-text= genre
 
         form.my-2.my-lg-0(action='/search', method='GET')
