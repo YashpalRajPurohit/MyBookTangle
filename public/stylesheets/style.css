@@ -55,12 +55,20 @@ legend {
   gap: 10px;
   /* Adjust spacing between elements as needed */
   width: 240px;
+  overflow: hidden;
 }
 
 .card:hover {
-  transform: scale(0.95);
+  transform: translateY(-10px);
   background-color: rgb(208, 215, 228);
   border: 2px solid rgb(112, 112, 111);
+  transition: transform 0.5s ease-in;
+
+  .card-img-top {
+    /* border-radius: 15px; */
+    transform: scale(1.6) translate(2px, 33px);
+    transition: transform 0.3s ease-in;
+  }
 }
 
 .banner {
@@ -146,6 +154,8 @@ body {
   height: 250px;
   width: 150px;
 }
+
+
 
 h5.card-title {
   /* white-space: nowrap; */
