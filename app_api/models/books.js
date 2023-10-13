@@ -36,4 +36,4 @@ const bookSchema = new mongoose.Schema({
     reviews: [reviewSchema]
 });
 
-mongoose.model('Book', bookSchema);
+mongoose.model('Book', bookSchema, 'books');
