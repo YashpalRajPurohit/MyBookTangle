@@ -1,14 +1,14 @@
-const createError = require('http-errors');
-const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
-require('./app_server/models/db');
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+require('./app_api/models/db');
 
-const indexRouter = require('./app_server/routes/index');
-const usersRouter = require('./app_server/routes/users');
+var indexRouter = require('./app_server/routes/index');
+var apiRouter = require('./app_api/routes/index');
 
-const app = express();
+var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'app_server', 'views'));
@@ -21,23 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-
-const { books } = require('./app_server/controllers/books'); // Import the books array
-
-// Define a route for searching books
-app.get('/search', (req, res) => {
-  const searchQuery = req.query.searchQuery.toLowerCase();
-  const filteredBooks = books.filter(book => book.name.toLowerCase().includes(searchQuery));
-  res.render('books-list', { books: filteredBooks, pageHeader: { title: 'Search Results', strapline: `Results for: ${searchQuery}` } });
-});
-
-// Define a route for filtering books by genre
-app.get('/genre/:genre', (req, res) => {
-  const selectedGenre = req.params.genre;
-  const filteredBooks = books.filter(book => book.genres.includes(selectedGenre));
-  res.render('books-list', { books: filteredBooks, pageHeader: { title: `${selectedGenre}`, strapline: `Books in Genre:` } });
-});
+app.use('/api', apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
