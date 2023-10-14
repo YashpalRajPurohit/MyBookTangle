@@ -1,3 +1,6 @@
+const mongoose = require('mongoose');
+const Book = mongoose.model('Book');
+
 const genres = [
     'Self-help',
     'philosophy',
@@ -119,7 +122,7 @@ const homelist = (req, res) => {
 };
 
 const BookInfo = (req, res) => {
-    renderPage(req, res, 'book-info', 'Book Info');
+    res.render('book-info',);
 };
 
 const addReview = (req, res) => {
