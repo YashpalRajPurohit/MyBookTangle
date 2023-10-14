@@ -244,3 +244,12 @@ input.form-control {
 .option-text {
   color: #161313;
 }
+
+img.aboutimg {
+  padding: 0px;
+  margin: 0px;
+  height: 500px;
+  width: 500px;
+  position: fixed;
+  transform: translate(20px, -40px);
+}

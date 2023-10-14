@@ -16,23 +16,11 @@ const reviewSchema = new mongoose.Schema({
 });
 
 const bookSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    address: String,
-    rating: {
-        type: Number,
-        'default': 0,
-        min: 1,
-        max: 5
-    },
+    name: String,
+    rating: Number,
     genres: [String],
     authors: [String],
-    image: {
-        type: String,
-        required: true
-    },
+    image: String,
     reviews: [reviewSchema]
 });
 
