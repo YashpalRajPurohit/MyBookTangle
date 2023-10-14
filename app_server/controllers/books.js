@@ -129,12 +129,25 @@ const addReview = (req, res) => {
     });
 };
 
+const byGenre = (req, res) => {
+    const selectedGenre = req.params.genre;
+    const filteredBooks = books.filter(book => book.genres.includes(selectedGenre));
+    res.render('books-list', { books: filteredBooks, pageHeader: { title: `${selectedGenre}`, strapline: `Books in Genre:` } });
+}
+
+const bySearch = (req, res) => {
+    const searchQuery = req.query.searchQuery.toLowerCase();
+    const searchedBooks = books.filter(book => book.name.toLowerCase().includes(searchQuery));
+    res.render('books-list', { books: searchedBooks, pageHeader: { title: 'Search Results', strapline: `Results for: ${searchQuery}` } });
+};
 
 
 module.exports = {
     homelist,
     BookInfo,
     addReview,
+    byGenre,
+    bySearch,
     books,
     genres,
 };

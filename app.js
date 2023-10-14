@@ -23,22 +23,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-const { books } = require('./app_server/controllers/books'); // Import the books array
-
-// Define a route for searching books
-app.get('/search', (req, res) => {
-  const searchQuery = req.query.searchQuery.toLowerCase();
-  const filteredBooks = books.filter(book => book.name.toLowerCase().includes(searchQuery));
-  res.render('books-list', { books: filteredBooks, pageHeader: { title: 'Search Results', strapline: `Results for: ${searchQuery}` } });
-});
-
-// Define a route for filtering books by genre
-app.get('/genre/:genre', (req, res) => {
-  const selectedGenre = req.params.genre;
-  const filteredBooks = books.filter(book => book.genres.includes(selectedGenre));
-  res.render('books-list', { books: filteredBooks, pageHeader: { title: `${selectedGenre}`, strapline: `Books in Genre:` } });
-});
-
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
