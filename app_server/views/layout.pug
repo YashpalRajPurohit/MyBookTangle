@@ -18,7 +18,7 @@ html
             li.nav-item
               a.nav-link(href='/about/') About
             li.nav-item.dropdown
-              select.nav-link.dropdown-toggle(id='genreDropdown', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false', onchange='filterByGenre()')
+              select.nav-link(id='genreDropdown', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false', onchange='filterByGenre()')
                 option(selected) Genre
                 //- Note the 'selected' attribute in the option element
                 .dropdown-menu(aria-labelledby='genreDropdown')
