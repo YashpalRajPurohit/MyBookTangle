@@ -8,9 +8,16 @@ const about = (req, res) => {
     );
 };
 
-
+const ContactUs = (req, res) => {
+    res.render('ContactUs',
+        {
+            title: 'Contact Us'
+        }
+    );
+};
 
 
 module.exports = {
     about,
+    ContactUs,
 };

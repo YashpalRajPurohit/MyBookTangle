@@ -24,7 +24,8 @@ html
                 .dropdown-menu(aria-labelledby='genreDropdown')
                   each genre in ['Self-help','Philosophy','Fiction','Friendship','Romance','Mystery','Magic','Crime','Thriller','Horror','Fantasy','Sci-fi','Strategy']
                     option.option-text= genre
-
+            li.nav-item
+              a.nav-link(href='/contactus') Contact Us
         form.my-2.my-lg-0(action='/search', method='GET')
           .form-group.searchbar
             input.form-control.mr-sm-2(type='text', name='searchQuery', placeholder='name of the book', aria-label='Search')

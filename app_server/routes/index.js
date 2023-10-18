@@ -13,6 +13,7 @@ router.get('/search', ctrlBooks.bySearch);
 
 /* Other pages */
 router.get('/about', ctrlOthers.about);
+router.get('/contactus', ctrlOthers.ContactUs);
 
 
 module.exports = router;

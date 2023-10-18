@@ -269,3 +269,17 @@ img.aboutimg {
   position: fixed;
   transform: translate(20px, -40px);
 }
+
+select.nav-link {
+  width: 90px;
+  margin-right: 30px;
+}
+
+div.listinContacts li {
+  list-style-type: none;
+  margin: 10px;
+}
+
+div.listinContacts a {
+  color: #0625b0;
+}
